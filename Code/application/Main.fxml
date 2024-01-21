@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="365.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <AnchorPane layoutX="-69.0" layoutY="-55.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TabPane layoutX="68.0" layoutY="55.0" prefHeight="366.0" prefWidth="525.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="LZSS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="inputFile" layoutX="43.0" layoutY="40.0" prefHeight="22.0" prefWidth="253.0" promptText="Input File" />
+                              <TextField fx:id="outputFile" layoutX="43.0" layoutY="90.0" prefHeight="22.0" prefWidth="253.0" promptText="Output File" />
+                              <Button layoutX="317.0" layoutY="40.0" mnemonicParsing="false" onAction="#location" text="location" />
+                              <ChoiceBox fx:id="MinMatchSize" layoutX="346.0" layoutY="168.0" prefHeight="26.0" prefWidth="127.0" />
+                              <ChoiceBox fx:id="LookAhead" layoutX="189.0" layoutY="168.0" prefHeight="26.0" prefWidth="127.0" />
+                              <ChoiceBox fx:id="SearchWindowSize" layoutX="24.0" layoutY="168.0" prefHeight="26.0" prefWidth="127.0" />
+                              <Button fx:id="startCompress" layoutX="413.0" layoutY="276.0" mnemonicParsing="false" onAction="#compress" text="Compress" />
+                              <Label layoutX="38.0" layoutY="144.0" text="SearchWindowSize" />
+                              <Label layoutX="372.0" layoutY="144.0" text="MinMatchSize" />
+                              <Label layoutX="223.0" layoutY="144.0" text="LookAhead" />
+                              <Label layoutX="74.0" layoutY="202.0" text="Bytes" />
+                              <Label layoutX="238.0" layoutY="202.0" text="Bytes" />
+                              <Label layoutX="395.0" layoutY="202.0" text="Bytes" />
+                              <Label layoutX="332.0" layoutY="94.0" text=":ecoded path" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Decompress">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="decompressInputFile" layoutX="43.0" layoutY="40.0" prefHeight="22.0" prefWidth="253.0" promptText="Input File" />
+                              <TextField fx:id="decompressOutputFile" layoutX="43.0" layoutY="90.0" prefHeight="22.0" prefWidth="253.0" promptText="Output File" />
+                              <Button fx:id="decompressLocation" layoutX="317.0" layoutY="40.0" mnemonicParsing="false" onAction="#decompressLocation" text="location" />
+                              <Button fx:id="startDecompress" layoutX="391.0" layoutY="268.0" mnemonicParsing="false" onAction="#decompress" text="Decompress" />
+                              <Label layoutX="332.0" layoutY="94.0" text=":decoded path" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
