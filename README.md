@@ -54,7 +54,7 @@ This project implements LZSS compression and decompression with a graphical user
 
 ## Screenshots
 
-[Add screenshots or images of your application here]
+Included in the repository Root.
 
 ## Contributors
 
